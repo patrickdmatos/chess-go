@@ -1,0 +1,36 @@
+# Binaries
+*.exe
+*.exe~
+*.out
+*.o
+*.a
+
+# Dependency directories
+/vendor/
+
+# Go modules
+go.sum
+
+# Test binary, build with `go test -c`
+*.test
+
+# Coverage files
+*.out
+*.cov
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.bak
+
+# Environment variables
+.env
+
+# SQLite database file
+*.db
