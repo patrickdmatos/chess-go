@@ -1,5 +1,5 @@
 # Chess Game
-<h6 style="color: blue;">This is a study project!</h6>
+<h6 style="color: red;">This is a study project!</h6>
 
 A chess API game built with Go, featuring a backend structure using the Fiber framework and GORM for database interactions.
 
