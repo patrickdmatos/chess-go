@@ -41,7 +41,8 @@ chess_game/
 │   ├── playerRepository.go      # Database interactions for players
 │   └── matchRepository.go       # Database interactions for matches
 ├── routes/
-│   └── routes.go               # Route definitions for the application
+│   └── players.routes.go        # Route definitions for players
+│   └── match.routes.go          # Route definitions for matches
 ├── services/
 │   ├── player.service.go        # Business logic for players
 │   └── match.service.go         # Business logic for matches
