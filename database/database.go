@@ -23,7 +23,7 @@ func Connect() (*Database, error) {
     }
 
     // Realiza a migração
-    if err := db.AutoMigrate(&models.Player{}); err != nil {
+    if err := db.AutoMigrate(&models.Player{}, &models.Friend{}, &models.Match{}); err != nil {
         return nil, err
     }
 

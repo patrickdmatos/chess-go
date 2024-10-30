@@ -1,9 +1,13 @@
 package models
 
+import "time"
+
 type Match struct {
-    ID          string `json:"id"`
-    Player1ID  string `json:"player1_id"`
-    Player2ID  string `json:"player2_id"`
-    Status      string `json:"status"` // e.g., "ongoing", "completed", "casual", "ranked", etc.
-    WinnerID    string `json:"winner_id,omitempty"`
+    ID          uint      `gorm:"primaryKey;autoIncrement"`
+    Player1ID   uint      `gorm:"not null"` // ID do primeiro jogador
+    Player2ID   uint      `gorm:"not null"` // ID do segundo jogador
+    Status      string    `gorm:"default:'in_progress'"` // Status da partida (ex.: 'in_progress', 'completed')
+    WinnerID    *uint     `gorm:"null"` // ID do jogador vencedor (null se ainda não finalizada)
+    CreatedAt   time.Time
+    UpdatedAt   time.Time
 }

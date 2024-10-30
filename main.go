@@ -27,11 +27,15 @@ func main() {
 
 	// Initialize repositories and services
 	playerRepo := repository.NewPlayerRepository(db.DB)
+	matchesRepos := repository.NewMatchRepository(db.DB)
 	playerService := service.NewPlayerService(playerRepo)
+	matchesService := service.NewMatchService(matchesRepos)
 	playerController := controllers.PlayerController{Service: playerService}
+	matchesController := controllers.MatchController{Service: matchesService}
 
 	// Setup Fiber
 	routes.PlayerRoutes(app, &playerController)
+	routes.MatchRoutes(app, &matchesController)
 
 	// Start server
 	if err := app.Listen(":7777"); err != nil {

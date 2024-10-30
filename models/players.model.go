@@ -4,6 +4,7 @@ type Player struct {
     ID       uint   `gorm:"primaryKey;autoIncrement"`
     Username string `gorm:"unique;not null"`
     Email    string `gorm:"unique;not null"`
+    Friends  []Friend `gorm:"foreignKey:PlayerID;references:ID"`
     Rating   int    `gorm:"default:0"`
 }
 
