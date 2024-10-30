@@ -7,7 +7,6 @@ A chess API game built with Go, featuring a backend structure using the Fiber fr
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -51,8 +50,7 @@ chess_game/
 ├── go.sum                       # Go module dependencies
 └── README.md                    # Project documentation
 ```
-Getting Started
-Prerequisites
+## Prerequisites
 Before getting started, ensure you have the following:
 
 Go 1.19 or later
@@ -68,10 +66,11 @@ go mod tidy
 Run the application:
 
 go run main.go
-Usage
-Once the application is running, you can access the API endpoints defined in the routes to interact with the chess game functionalities.
 
-Contributing
+## Usage
+Once the application is running, you can access the API endpoints defined in the routes to interact with the API functionalities.
+
+## Contributing
 We welcome contributions! Here’s how you can help:
 
 💬 Join the Discussions: Share your insights, provide feedback, or ask questions.
@@ -80,7 +79,7 @@ We welcome contributions! Here’s how you can help:
 
 💡 Submit Pull Requests: Review open PRs, and submit your own PRs.
 
-Acknowledgments
+## Acknowledgments
 Thanks to everyone who contributed to this project!
 
 
