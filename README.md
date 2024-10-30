@@ -1,6 +1,7 @@
 # Chess Game
+### this it`s a study project!
 
-A multiplayer chess game built with Go, featuring a backend structure using the Fiber framework and GORM for database interactions.
+A chess API game built with Go, featuring a backend structure using the Fiber framework and GORM for database interactions.
 
 ## Table of Contents
 - Overview
@@ -73,4 +74,4 @@ Contributing
 
 💡 Submit Pull Requests: Review open PRs, and submit your own PRs.
 
-Thanks
+Thanks for the help!
