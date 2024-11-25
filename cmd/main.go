@@ -6,6 +6,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
+	"github.com/patrickdmatos/chess-go-game/external/service"
 	"github.com/patrickdmatos/chess-go-game/internal/database"
 	"github.com/patrickdmatos/chess-go-game/internal/players/handlers"
 	"github.com/patrickdmatos/chess-go-game/internal/players/services"
@@ -36,9 +37,18 @@ func main() {
 	// Initialize Fiber app
 	app := fiber.New()
 
-	app.Get("/",middleware.Protect(), func(c *fiber.Ctx) error {
-        return c.SendString("Serviço de xadrez online!")
-    })
+	app.Get("/", func(c *fiber.Ctx) error {
+	claims, err := service.ValidateTokenWithRemoteAPI(c)
+	if err != nil {
+		return c.Status(fiber.StatusUnauthorized).SendString(err.Error())
+	}
+
+	// Retorne os claims como resposta
+	fmt.Println(claims)
+	
+	return c.JSON(claims)
+})
+
 
 	// Route to create a player
 	app.Post("/registerPlayer",middleware.Protect(), playerHandler.CreatePlayer)

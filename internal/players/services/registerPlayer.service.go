@@ -16,6 +16,7 @@ func (service *PlayerService) CreatePlayer(userID uint) (*models.Player, error) 
 	player := &models.Player{
 		UserID: userID,
 		Elo: 1500,
+		Role: "player",
 	}
 
 	if err := service.DB.Create(player).Error; err != nil {
