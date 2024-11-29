@@ -18,7 +18,7 @@ func ValidateTokenWithRemoteAPI(c *fiber.Ctx) (map[string]interface{}, error) {
 	}
 
 	// Criar a requisição HTTP para validar o token
-	req, err := http.NewRequest("GET", "http://127.0.0.1:3030/UserInfos", nil)
+	req, err := http.NewRequest("GET", "https://user-module-go.onrender.com/UserInfos", nil)
 	if err != nil {
 		return nil, fmt.Errorf("erro ao criar a requisição: %w", err)
 	}
